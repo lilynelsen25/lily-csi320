@@ -157,7 +157,7 @@ while($operation){
     elseif($choice -eq 0){
         $time = Read-Host -Prompt "Please enter the number of days to search back."
 
-        getFailedLogin | Group-Object Name | Where-Object $time -GT 10
+        getFailedLogins | Group-Object Name | Where-Object $time -GT 10
         }
 
     else{ Write-Host "Please enter a valid answer"} 
